@@ -503,7 +503,7 @@
         `Agradecemos sua participação, ${playerProfile.name}! Infelizmente, você ficou sem saldo de pontos. Tente novamente e mostre seu conhecimento sobre Moçambique!`;
       
       document.querySelector('.game-container').innerHTML = `
-        <h1>CWD Moçambique Quiz</h1>
+        <h1>Saber e Arte</h1>
         <div class="question">${message}</div>
         <button class="option" onclick="generateAndShareResult()" style="margin-bottom: 10px;">Baixar e Compartilhar Resultado</button>
         <button class="option" onclick="location.reload()">Jogar Novamente</button>
@@ -521,7 +521,7 @@
       ctx.fillStyle = '#fff';
       ctx.font = '24px Arial';
       ctx.textAlign = 'center';
-      ctx.fillText('CWD Moçambique Quiz', canvas.width / 2, 50);
+      ctx.fillText(Saber e Arte', canvas.width / 2, 50);
       ctx.font = '18px Arial';
       ctx.fillText(`Nome: ${playerProfile.name}`, canvas.width / 2, 100);
       ctx.fillText(`Idade: ${playerProfile.age}`, canvas.width / 2, 130);
@@ -539,7 +539,7 @@
       link.download = 'CWD_Mocambique_Quiz_Result.png';
       link.click();
 
-      const whatsappMessage = encodeURIComponent(`Confira meu resultado no CWD Moçambique Quiz!\nPontuação: ${points}\n@CWD2024`);
+      const whatsappMessage = encodeURIComponent(`Confira meu resultado no Saber e Arte!\nPontuação: ${points}\n@CWD2024`);
       const whatsappUrl = `https://wa.me/258842479404?text=${whatsappMessage}`;
       window.open(whatsappUrl, '_blank');
     }
