@@ -1,7 +1,7 @@
-<html><head><base href="https://cwd.com">
+<html><head><base href="https://camiloduvane.github.io/CWD/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CWD Moçambique Quiz</title>
+<title>Ministério Evangelho em Acção</title>
 <style>
   body {
     font-family: 'Arial', sans-serif;
@@ -144,13 +144,13 @@
         <option value="Outro">Outro</option>
       </select>
       <input type="tel" id="playerContact" placeholder="Contacto" required>
-      <button onclick="saveProfileAndStartGame()">Guardar e Iniciar Jogo</button>
+      <button onclick="saveProfileAndStartGame()">Iniciar Jogo</button>
     </div>
   </div>
 
   <div class="game-container">
     <div class="timer" id="timer">30</div>
-    <h1>CWD Moçambique Quiz</h1>
+    <h1>Ministério Evangelho em Acção</h1>
     <div class="question" id="question">Carregando pergunta...</div>
     <div class="options" id="options"></div>
     <div class="prize" id="prize">Pontos: 0</div>
