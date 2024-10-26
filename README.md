@@ -1,7 +1,7 @@
 <html><head><base href="https://camiloduvane.github.io/CWD/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ministério Evangelho em Acção</title>
+<title>Saber e Arte</title>
 <style>
   body {
     font-family: 'Arial', sans-serif;
@@ -134,7 +134,7 @@
 <body>
   <div id="profileModal" class="modal">
     <div class="modal-content">
-      <h2>Perfil do Jogador</h2>
+      <h2>Perfil</h2>
       <input type="text" id="playerName" placeholder="Nome" required>
       <input type="number" id="playerAge" placeholder="Idade" required>
       <select id="playerGender" required>
@@ -144,13 +144,13 @@
         <option value="Outro">Outro</option>
       </select>
       <input type="tel" id="playerContact" placeholder="Contacto" required>
-      <button onclick="saveProfileAndStartGame()">Iniciar Jogo</button>
+      <button onclick="saveProfileAndStartGame()">Iniciar</button>
     </div>
   </div>
 
   <div class="game-container">
     <div class="timer" id="timer">30</div>
-    <h1>Ministério Evangelho em Acção</h1>
+    <h1>Saber e Arte</h1>
     <div class="question" id="question">Carregando pergunta...</div>
     <div class="options" id="options"></div>
     <div class="prize" id="prize">Pontos: 0</div>
