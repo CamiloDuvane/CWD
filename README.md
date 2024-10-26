@@ -169,24 +169,24 @@
   <script>
     const questions = [
       {
-        question: "Qual é a capital de Moçambique?",
-        options: ["Maputo", "Beira", "Nampula", "Quelimane"],
-        correct: 0
+        question: "Qual é a congregação conhecida pela sigla MEA??",
+        options: ["Ministério Em Acção", "Missão de Ensino e Aprendizado", "Ministério Evangelho em Acção", "Movimento Esperança e Amor"],
+        correct: 2
       },
       {
-        question: "Qual é a moeda oficial de Moçambique?",
-        options: ["Kwanza", "Metical", "Rand", "Pula"],
+        question: "EM que ano foi fundada o Ministério Evangelho em Acção?",
+        options: ["1999", "2000", "2001", "2002"],
         correct: 1
       },
       {
-        question: "Qual é o maior parque nacional de Moçambique?",
-        options: ["Parque Nacional da Gorongosa", "Parque Nacional do Limpopo", "Parque Nacional das Quirimbas", "Reserva Nacional do Niassa"],
+        question: "Onde fica a sede do Ministério Evangelho em Ação (MEA)?",
+        options: ["Katembe", "Mathemele", "Mahotas", "Laulane"],
         correct: 3
       },
       {
-        question: "Qual é o prato tradicional moçambicano feito com amendoim e folhas de mandioca?",
-        options: ["Pap", "Xima", "Matapa", "Chamuça"],
-        correct: 2
+        question: "Qual é o nome completo do pai que Deus escolheu para fundar o Ministério Evangelho em Ação (MEA)?",
+        options: ["Luís Betuel Maposse", "Luís Maposse", "Luís José Maposse", "Luís Mahotas"],
+        correct: 0
       },
       {
         question: "Quem foi o primeiro presidente de Moçambique independente?",
