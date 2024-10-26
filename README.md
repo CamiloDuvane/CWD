@@ -536,7 +536,7 @@
       const dataUrl = canvas.toDataURL('image/png');
       const link = document.createElement('a');
       link.href = dataUrl;
-      link.download = 'CWD_Mocambique_Quiz_Result.png';
+      link.download = 'Saber_e_Arte_Result.png';
       link.click();
 
       const whatsappMessage = encodeURIComponent(`Confira meu resultado no Saber e Arte!\nPontuação: ${points}\n@CWD2024`);
