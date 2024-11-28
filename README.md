@@ -1,12 +1,8 @@
 <html><head><base href="https://camiloduvane.github.io/CWD/">
 
-<audio controls autoplay>
+<audio controls loop>
   <source src="myles-smith-nice-to-meet-you-official-video-9VbDkDALT7w.mp3" type="audio/mpeg">
-  <source src="minha_musica.ogg" type="audio/ogg">
-  Seu navegador não suporta o elemento audio.
 </audio>
-
-
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
