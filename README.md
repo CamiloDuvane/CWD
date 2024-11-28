@@ -1,6 +1,6 @@
 <html><head><base href="https://camiloduvane.github.io/CWD/">
 
-<audio controls loop>
+<audio controls autoplay loop>
   <source src="myles-smith-nice-to-meet-you-official-video-9VbDkDALT7w.mp3" type="audio/mpeg">
 </audio>
   
