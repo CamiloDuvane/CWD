@@ -1,9 +1,7 @@
 <html><head><base href="https://camiloduvane.github.io/CWD/">
 
-<audio id="myAudio" controls>
+<audio id="myAudio" controls autoplay loop>
   </audio>
-
-<button onclick="playNext()">Próxima Música</button>
 
 <script>
   const audio = document.getElementById('myAudio');
