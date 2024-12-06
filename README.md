@@ -1,8 +1,23 @@
 <html><head><base href="https://camiloduvane.github.io/CWD/">
 
-<audio controls autoplay loop>
-  <source src="myles-smith-nice-to-meet-you-official-video-9VbDkDALT7w.mp3" type="audio/mpeg">
-</audio>
+<audio id="myAudio" controls>
+  </audio>
+
+<button onclick="playNext()">Próxima Música</button>
+
+<script>
+  const audio = document.getElementById('myAudio');
+  let currentSongIndex = 0;
+  const songs = ['Fernanda_Tomadon_-_Me_Leva_CeeNaija.com_.mp3', 'musica2.ogg', 'musica3.wav']; // Lista de músicas
+
+  function playNext() {
+    audio.src = songs[currentSongIndex];
+    audio.play();
+    currentSongIndex = (currentSongIndex + 1) % songs.length; // Incrementa o índice e volta ao início da lista
+  }
+</script>
+
+
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
