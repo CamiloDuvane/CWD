@@ -8,7 +8,7 @@
 <script>
   const audio = document.getElementById('myAudio');
   let currentSongIndex = 0;
-  const songs = ['Fernanda_Tomadon_-_Me_Leva_CeeNaija.com_.mp3', 'musica2.ogg', 'musica3.wav']; // Lista de músicas
+  const songs = ['myles-smith-nice-to-meet-you-official-video-9VbDkDALT7w.mp3', 'Fernanda_Tomadon_-_Me_Leva_CeeNaija.com_.mp3', 'Fernanda_Tomadon_-_Levanto_Um_Altar_CeeNaija.com_.mp3', 'Fernanda_Tomadon_-_Quem_Sou_CeeNaija.com_.mp3']; // Lista de músicas
 
   function playNext() {
     audio.src = songs[currentSongIndex];
