@@ -1,6 +1,7 @@
 <html><head><base href="https://camiloduvane.github.io/CWD/">
 
-<audio id="myAudio" controls autoplay loop>
+<audio controls autoplay loop>
+<audio id="myAudio" controls>
   </audio>
 
 <script>
