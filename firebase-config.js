@@ -10,7 +10,10 @@ const firebaseConfig = {
   measurementId: "G-2GMQCP11CF"
 };
 
-// Initialize Firebase with compat version
+// Initialize Firebase with compat version (make sure to load the compat version of the SDK)
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const analytics = firebase.analytics();
+
+// Set up persistence
+auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);

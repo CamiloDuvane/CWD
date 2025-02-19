@@ -31,9 +31,18 @@ function Login({ onLogin }) {
           <h1 className="text-3xl font-bold text-indigo-600 mb-2">
             Sistema de Aprendizagem
           </h1>
-          <p className="text-gray-600">
-            {isSignup ? 'Crie sua conta' : 'Faça login para continuar'}
+          <p className="text-gray-600 mb-4">
+            {isSignup ? 'Crie sua conta para começar' : 'Bem-vindo de volta!'}
           </p>
+          <div className="bg-indigo-50 p-4 rounded-lg text-sm text-indigo-800 mb-6">
+            <p className="font-medium mb-2">Como funciona:</p>
+            <ul className="list-disc list-inside space-y-1 text-left">
+              <li>Acesse material de estudo organizado por disciplinas</li>
+              <li>Pratique com questionários interativos</li>
+              <li>Tire dúvidas no chat com outros estudantes</li>
+              <li>Acompanhe seu progresso em tempo real</li>
+            </ul>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">

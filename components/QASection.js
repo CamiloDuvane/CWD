@@ -29,9 +29,14 @@ function QASection() {
   const handleSendMessage = async () => {
     if (!newMessage.trim() || !selectedSubject) return;
 
+    // Get current user from auth
+    const user = auth.currentUser;
+    if (!user) return;
+
     await room.collection('chat_message').create({
       subject: selectedSubject,
       text: newMessage,
+      email: user.email // Add email to message
     });
 
     setNewMessage('');
@@ -52,6 +57,10 @@ function QASection() {
           <option value="geografia">Geografia</option>
           <option value="ciencias">Ciências</option>
           <option value="ingles">Inglês</option>
+          <option value="biologia">Biologia</option>
+          <option value="quimica">Química</option>
+          <option value="fisica">Física</option>
+          <option value="arte">Arte</option>
         </select>
       </div>
 
@@ -76,7 +85,10 @@ function QASection() {
                       alt={message.username}
                       className="w-6 h-6 rounded-full"
                     />
-                    <span className="text-sm font-medium">{message.username}</span>
+                    <div>
+                      <span className="text-sm font-medium">{message.username}</span>
+                      <span className="text-xs opacity-75 block">{message.email}</span>
+                    </div>
                   </div>
                   <p>{message.text}</p>
                   <span className="text-xs opacity-75">
