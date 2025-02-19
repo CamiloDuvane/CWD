@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --secondary: #10b981;
+  --secondary-dark: #059669;
+  --background: #f3f4f6;
+  --text: #1f2937;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700 shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-emerald-600 text-white hover:bg-emerald-700 shadow-md hover:shadow-lg;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300;
+}
+
+.card-hover {
+  @apply hover:shadow-xl hover:scale-102 transform transition-all duration-300;
+}
+
+.input {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+/* Staggered animations for lists */
+.stagger-animation > * {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+
+.subject-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.subject-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.subject-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.subject-grid > *:nth-child(4) { animation-delay: 0.4s; }
+.subject-grid > *:nth-child(5) { animation-delay: 0.5s; }
+.subject-grid > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Performance report specific styles */
+.performance-card {
+  @apply card mb-4 transition-all duration-300;
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.performance-card.correct {
+  @apply bg-green-50 border-2 border-green-200;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+}
+
+.performance-card.incorrect {
+  @apply bg-red-50 border-2 border-red-200;
+  background: linear-gradient(135deg, #fee2e2 0%, #fca5a5 100%);
+}
+
+.performance-stat {
+  @apply flex items-center space-x-2 p-3 rounded-lg mb-2 transition-all duration-200;
+}
+
+.performance-header {
+  @apply flex items-center justify-between mb-6 p-6 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white rounded-xl shadow-lg;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.performance-badge {
+  @apply px-4 py-2 rounded-full text-sm font-semibold shadow-md transition-all duration-200;
+}
+
+.badge-success {
+  @apply bg-green-500 text-white;
+}
+
+.badge-error {
+  @apply bg-red-500 text-white;
+}
+
+/* Subject list animations */
+.subject-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.subject-card {
+  @apply card card-hover cursor-pointer;
+  animation: fadeInScale 0.5s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Quiz animations */
+.quiz-option {
+  @apply p-4 rounded-lg cursor-pointer border-2 transition-all duration-200;
+  animation: slideInRight 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.quiz-option:hover {
+  @apply transform scale-102 shadow-md;
+}
+
+.quiz-option.selected {
+  @apply border-indigo-600 bg-indigo-50;
+}
+
+.quiz-feedback {
+  animation: popIn 0.3s ease-out forwards;
+  transform-origin: center;
+}
+
+/* Topic card hover effects */
+.topic-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Report download button animation */
+.download-button {
+  @apply btn btn-primary flex items-center space-x-2;
+  animation: pulse 2s infinite;
+}
+
+/* Enhanced transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Loading state animations */
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
