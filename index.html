@@ -13,38 +13,52 @@
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="preconnect" href="https://cdn.tailwindcss.com">
   
-  <!-- Firebase SDKs -->
-  <script defer src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+  <!-- Firebase SDKs - Make sure to load compat version -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
   
   <!-- React and Babel -->
-  <script defer src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script defer src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
   <!-- Tailwind CSS -->
-  <script defer src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Custom styles -->
   <link rel="stylesheet" href="styles.css">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
-  
-  <!-- Cookie policy -->
-  <script>
-    // Set SameSite attribute for cookies
-    document.cookie = "cookieConsent=true; SameSite=Strict; Secure";
-  </script>
 </head>
 <body>
   <div id="root"></div>
 
-  <!-- Ensure Firebase is loaded before app scripts -->
-  <script type="text/babel" src="firebase-config.js"></script>
+  <!-- Initialize Firebase first -->
+  <script>
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAJzL6sk0pDZtC-jtbpLNNR1dlQ94D9ccA",
+      authDomain: "mea2024-d8f25.firebaseapp.com",
+      databaseURL: "https://mea2024-d8f25-default-rtdb.firebaseio.com",
+      projectId: "mea2024-d8f25",
+      storageBucket: "mea2024-d8f25.firebasestorage.app",
+      messagingSenderId: "770842232248",
+      appId: "1:770842232248:web:f3da86205a5b3e6afbfb4d",
+      measurementId: "G-2GMQCP11CF"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const analytics = firebase.analytics();
+
+    // Set up persistence
+    auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+  </script>
   
-  <!-- Load components after Firebase initialization -->
+  <!-- Load React components -->
   <script type="text/babel" src="components/Login.js"></script>
   <script type="text/babel" src="components/Navbar.js"></script>
   <script type="text/babel" src="components/Dashboard.js"></script>
@@ -62,5 +76,10 @@
       <p>Por favor, habilite JavaScript para utilizar esta aplicação.</p>
     </div>
   </noscript>
+
+  <!-- Set secure cookie policy -->
+  <script>
+    document.cookie = "cookieConsent=true; SameSite=Strict; Secure";
+  </script>
 </body>
 </html>
