@@ -2,35 +2,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Sistema de Aprendizagem - Plataforma educacional interativa">
+  <meta name="theme-color" content="#4f46e5">
+  
   <title>Sistema de Aprendizagem</title>
   
+  <!-- Preload critical assets -->
+  <link rel="preconnect" href="https://www.gstatic.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  
   <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
   
   <!-- React and Babel -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script defer src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script defer src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.tailwindcss.com"></script>
   
   <!-- Custom styles -->
-  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  
+  <!-- Cookie policy -->
+  <script>
+    // Set SameSite attribute for cookies
+    document.cookie = "cookieConsent=true; SameSite=Strict; Secure";
+  </script>
 </head>
 <body>
   <div id="root"></div>
 
-  <!-- Application scripts -->
+  <!-- Ensure Firebase is loaded before app scripts -->
   <script type="text/babel" src="firebase-config.js"></script>
+  
+  <!-- Load components after Firebase initialization -->
   <script type="text/babel" src="components/Login.js"></script>
   <script type="text/babel" src="components/Navbar.js"></script>
   <script type="text/babel" src="components/Dashboard.js"></script>
   <script type="text/babel" src="components/SubjectList.js"></script>
   <script type="text/babel" src="components/QASection.js"></script>
   <script type="text/babel" src="components/PerformanceReport.js"></script>
+  
+  <!-- Load main app last -->
   <script type="text/babel" src="app.js"></script>
+  
+  <!-- Add noscript fallback -->
+  <noscript>
+    <div style="padding: 2rem; text-align: center;">
+      <h1>Sistema de Aprendizagem</h1>
+      <p>Por favor, habilite JavaScript para utilizar esta aplicação.</p>
+    </div>
+  </noscript>
 </body>
 </html>
